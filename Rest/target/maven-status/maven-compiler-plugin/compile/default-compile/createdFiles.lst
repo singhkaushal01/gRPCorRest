@@ -1,0 +1,4 @@
+com/poc/rest/RestApplication.class
+com/poc/rest/SampleDataLoadingService.class
+com/poc/rest/Product.class
+com/poc/rest/RestApplicationController.class

@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+option java_package = "com.poc.grpc.product";
+option java_multiple_files = true;
+
+package product;
+import "google/protobuf/empty.proto";
+
+service ProductService{
+  rpc GetProduct(ProductId) returns (Product) {}
+  rpc GetProductIds(google.protobuf.Empty) returns (ProductIdList) {}
+  rpc GetProductList(params) returns (ProductsList) {}
+}
+
+message ProductIdList {
+  repeated ProductId productId =1;
+}
+message ProductsList {
+  repeated Product product=1;
+}
+message params {
+  optional int32 count=1;
+  optional int32 offset=2;
+}
+message Product {
+  int32 id=1;
+  string name=2;
+  float price=3;
+  int32 stock=4;
+  string category=5;
+  string brand=6;
+  string weight=7;
+  string color=8;
+  string manufacturer=9;
+  string releaseDate=10;
+  float rating=11;
+  string attribute1=12;
+  string attribute2=13;
+  string attribute3=14;
+  string attribute4=15;
+  string attribute5=16;
+  string attribute6=17;
+  string attribute7=18;
+  string attribute8=19;
+  string attribute9=20;
+  string attribute10=21;
+  string attribute11=22;
+  string attribute12=23;
+  string attribute13=24;
+  string attribute14=25;
+  string attribute15=26;
+  string attribute16=27;
+  string attribute17=28;
+  string attribute18=29;
+  string attribute19=39;
+  string attribute20=31;
+}
+
+message ProductId {
+  int32 id =1;
+}
